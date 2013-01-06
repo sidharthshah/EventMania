@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AFNetworking.h" 
+#import "ServiceClient.h"
 
 @interface ViewController ()
 
@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    ServiceClient* client = [[ServiceClient alloc] init];
+    [client authUser:@"iamsidd" password:@"password"];
 }
 
 - (void)didReceiveMemoryWarning
